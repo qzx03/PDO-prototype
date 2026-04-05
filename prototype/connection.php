@@ -12,12 +12,4 @@ try{
     echo"Connection error: ". $e->getMessage();
 }
 
-
-
-
-
-
-
-
-
 ?>

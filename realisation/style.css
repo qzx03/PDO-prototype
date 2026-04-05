@@ -1,0 +1,54 @@
+/* Container for all recipe cards */
+.recipe-container {
+    display: grid;
+    /* This creates 4 equal columns */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Space between cards */
+    padding: 20px;
+}
+
+/* Individual card styling */
+.recipe-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Image styling to ensure it fits the card */
+.recipe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* Prevents image stretching */
+    border-radius: 4px;
+}
+
+.recipe-card h1 {
+    font-size: 1.25rem;
+    margin: 10px 0;
+}
+
+.recipe-card p {
+    color: #666;
+    font-size: 0.9rem;
+    margin: 5px 0;
+}
+
+/* Responsive adjustment: 2 cards on tablets, 1 on phones */
+@media (max-width: 1024px) {
+    .recipe-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .recipe-container {
+        grid-template-columns: 1fr;
+    }
+}
