@@ -27,27 +27,35 @@ $recipes = $stmt->fetchALL(PDO::FETCH_ASSOC);
 ?>
 
     <form action="index.php" method="GET">
-    <label for="search">Search: </label>
-    <input type="text" placeholder="search" name="search" id="search">
-    <label for="category">Select category: </label>
-    <select name="category" id="category">
-        <option value="all">All</option>
-        <option value="entree">Entree</option>
-        <option value="main">Main</option>
-        <option value="dessert">Dessert</option>
-    </select>
-    <label for="sort">Sort by: </label>
-    <select name="sort" id="sort">
-        <option value="nosort">No sort</option>
-        <option value="mtime">Most time consuming</option>
-        <option value="ltime">Least time consuming</option>
-        <option value="newest">Newest</option>
-        <option value="oldest">Oldest</option>
-    </select>
-    <input type="submit" value="Sort">
-    <input type="submit" value="Reset" name="reset">
+    <div class="field-group">
+        <label for="search">Search</label>
+        <input type="text" placeholder="Search recipes..." name="search" id="search">
+    </div>
 
-    </form>
+    <div class="field-group">
+        <label for="category">Category</label>
+        <select name="category" id="category">
+            <option value="all">All</option>
+            <option value="entree">Entree</option>
+            <option value="main">Main</option>
+            <option value="dessert">Dessert</option>
+        </select>
+    </div>
+
+    <div class="field-group">
+        <label for="sort">Sort by</label>
+        <select name="sort" id="sort">
+            <option value="nosort">No sort</option>
+            <option value="mtime">Most time consuming</option>
+            <option value="ltime">Least time consuming</option>
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+        </select>
+    </div>
+
+    <input type="submit" value="Filter">
+    <input type="submit" value="Reset" name="reset">
+</form>
 
 <div class="recipe-container">
 

@@ -52,3 +52,73 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* Container styling */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Individual field groups */
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Label styling */
+label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #495057;
+}
+
+/* Inputs and Selects */
+input[type="text"], 
+select {
+    padding: 8px 12px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="text"]:focus, 
+select:focus {
+    border-color: #007bff;
+}
+
+/* Buttons */
+input[type="submit"] {
+    padding: 9px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+/* Primary "Sort" Button */
+input[type="submit"]:not([name="reset"]) {
+    background-color: #007bff;
+    color: white;
+}
+
+/* "Reset" Button */
+input[type="submit"][name="reset"] {
+    background-color: #6c757d;
+    color: white;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.9;
+}
